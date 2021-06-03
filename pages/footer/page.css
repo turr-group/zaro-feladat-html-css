@@ -1,11 +1,4 @@
-.footer {
-    display: flex;
-    flex-flow: row;
-    max-height: 4ch;
-    justify-content: space-between;
-    background-color: rgb(88, 110, 117);
-}
-.footer > img {
+.logo {
     height: 100%;
     width: auto;
 }
