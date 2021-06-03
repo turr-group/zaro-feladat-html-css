@@ -6,46 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RAW</title>
     <link rel="shortcut icon" type="image/jpg" href="./media/images/qr.png"/>
-    <link href="./css/normalize.css" rel="stylesheet" type="text/css">
-    <link href="./css/index.css" rel="stylesheet" type="text/css">
+    <link href="./pages/normalize.css" rel="stylesheet" type="text/css">
+    <link href="./pages/index.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <div id="navbar">
-                <ul>
-                    <li>Főoldal</li>
-                    <li class="dropdown"><span>Weboldal készítés</span>
-                        <div class="dropdown-content">
-                            <ul>
-                                <li><a href=""><span>Egyszerű bemutatkozó oldal</span></a></li>
-                                <li><a href=""><span>Céges honlap készítés</span></a></li>
-                                <li><a href=""><span>WordPress honlap készítés</span></a></li>
-                                <li><a href=""><span>Egyedi weboldal készítése</span></a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href=""><span>Weboldal készítés árak</span></a></li>
-                    <li class="dropdown"><span>Referenciák</span>
-                        <div class="dropdown-content">
-                            <ul>
-                                <li><a href=""><span>Egyedi weboldalak</span></a></li>
-                                <li><a href=""><span>WordPress honlapok</span></a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href=""><span>Gyakori kérdések</span></a></li>
-                    <li><a href=""><span>Kapcsolat</span></a></li>
-                </ul>
-            </div>
+    <body>
+        <div class="container">
+            <div class="header"><script>$(".header").load(`./pages/header/page.html`);</script></div>
+            <div class="main"><script>$(".main").load(`./pages/0/page.html`);</script></div>
+            <div class="footer"><script>$(".footer").load(`./pages/footer/page.html`);</script></div>
         </div>
-        <div class="main"><span>main</span></div>
-        <div class="footer">
-            <span>footer</span>
-            <img src="./media/images/qr.png" alt="logo">
-        </div>
-    </div>
-</body>
+    </body>
+    <script>
+        $(document).ready(function() {
+            for (let i = 0; i < 10; i++) {
+                $(`#page${i}`).click(function(){
+                    $(".main").load(`./pages/${i}/page.html`);
+                });
+            }
+        });
+    </script>
 </html>

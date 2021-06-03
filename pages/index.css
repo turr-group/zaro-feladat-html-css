@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0,43,54);
+    font-family: 'Oswald', sans-serif;
+}
+.container {
+    min-width: 320px;
+    background-color: rgb(7,54,66);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-content: stretch;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+.header,.main,.footer {
+    margin: 2px;
+    padding: 0;
+}
+.header {
+    background-color: rgb(88, 110, 117);
+    display: flex;
+    flex-flow: row wrap;
+    min-height: 10ch;
+    width: calc(100% - 6px);
+    justify-content: flex-end;
+    align-content: flex-end;
+}
+.main {
+    flex: 2;
+    background-color: rgb(74, 116, 129);
+}
+.footer {
+    display: flex;
+    flex-flow: row;
+    max-height: 4ch;
+    justify-content: space-between;
+    background-color: rgb(88, 110, 117);
+}
