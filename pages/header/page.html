@@ -25,3 +25,12 @@
         <li><span id="page9">Kapcsolat</span></li>
     </ul>
 </div>
+<script>
+    $(document).ready(function() {
+        for (let i = 0; i < 10; i++) {
+            $(`#page${i}`).click(function(){
+                $(".main").load(`./pages/${i}/page.html`);
+            });
+        }
+    });
+</script>
