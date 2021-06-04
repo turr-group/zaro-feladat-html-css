@@ -1,4 +1,23 @@
-.logo {
+.footer-container {
+    color: white;
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(64px, 256px) );
+
+}
+
+.footer-container > * {
+    height: auto;
+    width: 128px;
+}
+
+.footer-logo-turr {
     height: 100%;
-    width: auto;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 4px;
+}
+.footer-logo-svg {
+    height: 100%;
+    width: 3vw;
 }

@@ -19,7 +19,7 @@ html, body {
 .header,.main,.footer {
     margin: 2px;
     padding: 0;
-    background-color: rgb(5, 34, 41);
+    background-color: rgb(16, 16, 16);
 }
 .header {
     display: flex;
@@ -34,7 +34,6 @@ html, body {
 }
 .footer {
     display: flex;
-    flex-flow: row;
-    max-height: 4ch;
-    justify-content: space-between;
+    max-height: 4rem;
+    padding: 6px;
 }
