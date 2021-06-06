@@ -1,12 +1,16 @@
 html, body {
     height: 100%;
     width: 100%;
-    background-color: rgb(0, 0, 0);
-    font-family: 'Oswald', sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #797979;
+    opacity: 1;
+    background-image:  repeating-radial-gradient( circle at 88% 6%, transparent 0, #000000 10px ), repeating-linear-gradient( #54545455, #545454 );
+
 }
 .container {
     min-width: 320px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0,0.7);
+    background-color: transparent;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -19,12 +23,11 @@ html, body {
 .header,.main,.footer {
     margin: 2px;
     padding: 0;
-    background-color: rgb(16, 16, 16);
+    background-color: transparent;
 }
 .header {
     display: flex;
     flex-flow: row wrap;
-    min-height: 10ch;
     width: calc(100% - 6px);
     justify-content: flex-end;
     align-content: flex-end;
@@ -32,8 +35,11 @@ html, body {
 .main {
     flex: 2;
 }
+
 .footer {
     display: flex;
-    max-height: 4rem;
-    padding: 6px;
+    height: min-content;
+    justify-content: center;
 }
+
+

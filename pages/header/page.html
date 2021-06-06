@@ -1,35 +1,54 @@
 <link type="text/css" rel="stylesheet" href="pages/header/page.css">
-<div class="navbar">
+<div class="header-container">
     <ul class="navbar_menu">
-        <li><span id="page0">Főoldal</span></li>
-        <li class="dropdown"><span>Weboldal készítés</span>
-            <div class="dropdown-content">
-                <ul>
-                    <li><span id="page1">Egyszerű bemutatkozó oldal</span></li>
-                    <li><span id="page2">Céges honlap készítés</span></li>
-                    <li><span id="page3">WordPress honlap készítés</span></li>
-                    <li><span id="page4">Egyedi weboldal készítése</span></li>
-                </ul>
-            </div>
-        </li>
-        <li><span id="page5">Weboldal készítés árak</span></li>
-        <li class="dropdown"><span>Referenciák</span>
-            <div class="dropdown-content">
-                <ul>
-                    <li><span id="page6">Egyedi weboldalak</span></li>
-                    <li><span id="page7">WordPress honlapok</span></li>
-                </ul>
-            </div>
-        </li>
-        <li><span id="page8">Gyakori kérdések</span></li>
-        <li><span id="page9">Kapcsolat</span></li>
+        <li id="page0" class="navbar_menu_item"><span>Főoldal</span></li>
+        <li class="navbar_menu_button_sub1 navbar_menu_button"><span>Weboldal készítés</span></li>
+            <li id="page1" class="navbar_menu_sub1 navbar_menu_sub_iten"><span>Egyszerű bemutatkozó oldal</span></li>
+            <li id="page2" class="navbar_menu_sub1 navbar_menu_sub_iten"><span>Céges honlap készítés</span></li>
+            <li id="page3" class="navbar_menu_sub1 navbar_menu_sub_iten"><span>WordPress honlap készítés</span></li>
+            <li id="page4" class="navbar_menu_sub1 navbar_menu_sub_iten"><span>Egyedi weboldal készítése</span></li>
+        <li id="page5" class="navbar_menu_item"><span>Weboldal készítés árak</span></li>
+        <li class="navbar_menu_button_sub2 navbar_menu_button"><span>Referenciák</span></li>
+            <li id="page6" class="navbar_menu_sub2 navbar_menu_sub_iten"><span>Egyedi weboldalak</span></li>
+            <li id="page7" class="navbar_menu_sub2 navbar_menu_sub_iten"><span>WordPress honlapok</span></li>
+        <li id="page8" class="navbar_menu_item"><span>Gyakori kérdések</span></li>
+        <li id="page9" class="navbar_menu_item"><span>Kapcsolat</span></li>
     </ul>
 </div>
 <script>
     $(document).ready(function() {
+        let item = $(`.navbar_menu_item`);
+        let count = 0;
+        for (let i = 0; i < 3; i++) {
+            let button = $(`.navbar_menu_button_sub${i}`);
+            let menu = $(`.navbar_menu_sub${i}`);
+            button.click(function() {
+                if (menu.css("display") == "none" ) {
+                    menu.css("width", "fit-content");
+                    menu.css("display","inline");
+                    item.css("color","rgba(255, 255, 255, 0.7)");
+                    item.css("font-size", "calc(0.5rem + 0.5vw)");
+                    count += 1;
+                } else {
+                    menu.css("width", "0ch");
+                    menu.css("display","none");
+                    count -= 1;
+                    if (count == 0) {
+                        item.css("font-size", "calc(0.5rem + 1vw)");
+                        item.css("color","rgba(255, 255, 255, 1)");
+                    }
+                }
+            });
+        }
+        var last_page;
         for (let i = 0; i < 10; i++) {
             $(`#page${i}`).click(function(){
                 $(".main").load(`./pages/${i}/page.html`);
+                if (typeof last_page !== 'undefined') {
+                    last_page.css("background-color","transparent");
+                }
+                $(this).css("background-color","rgba(255,0,0,1)");
+                last_page = $(this);
             });
         }
     });
