@@ -61,7 +61,7 @@ $(document).ready(function() {
         button.click(function() {
             if (menu.css("display") == "none" ) {
                 menu.css("width", "fit-content");
-                menu.css("display","inline");
+                menu.css("display","block");
                 menu.css("opacity","100%");
                 button.css("background-color",styles.menu_button[0]);
                 button.css("color",styles.menu_button[2]);
