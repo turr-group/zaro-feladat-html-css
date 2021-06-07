@@ -60,16 +60,14 @@ $(document).ready(function() {
         let menu = $(`.menu_sub_${i}`);
         button.click(function() {
             if (menu.css("display") == "none" ) {
-                menu.css("width", "fit-content");
                 menu.css("display","block");
-                menu.css("opacity","100%");
                 button.css("background-color",styles.menu_button[0]);
                 button.css("color",styles.menu_button[2]);
                 item.css("color","rgba(255, 255, 255, 0.7)");
                 item.css(`font-size`,`calc(${styles.menu_item[4]}rem + ${styles.menu_item[5]/2}vw)`);
                 count += 1;
             } else {
-                menu.css("width", "0ch");
+                
                 menu.css("display","none");
                 count -= 1;
                 if (count == 0) {

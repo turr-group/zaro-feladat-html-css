@@ -20,7 +20,6 @@
     margin: 0;
     padding: 0;
 }
-
 .menu > li:hover {
     animation-name: anim_trans_to_red;
     animation-duration: 1s;
@@ -29,16 +28,14 @@
     cursor: pointer;
     border-radius: 6px;
 }
-
 @keyframes anim_trans_to_red {
     0%   {background-color: rgba(255,0,0,0);}
     50% {background-color: rgba(255,0,0,1);}
     100%   {background-color: rgba(255,0,0,0);}
 }
-
 .menu_item, .menu_sub_item, .menu_button {
-    display: inline-block;
-    overflow-wrap: break-word;
+    display: block;
+    /* overflow-wrap: break-word; */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     width: fit-content;
     height: min-content;
@@ -48,24 +45,18 @@
     align-self: baseline;
     transition: all 0.4s ease-in-out;
 }
-
 .menu_item {
     color: white;
     background-color: transparent;
 }
-
 .menu_sub_item {
     margin-left: 0;
     margin-right: 0;
     display: none;
     color: white;
-    
     background-color: rgba(0, 255, 0, 0.5);
-    opacity: 0%;
 }
-
 .menu_button {
-
     background-color: rgba(0, 255, 0, 0.2);
     color: white;
 }
