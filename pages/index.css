@@ -1,45 +1,41 @@
 html, body {
+    background-color: #797979;
+    background-image:  repeating-radial-gradient( circle at 50% 100%, transparent 0, #000000 10px ), repeating-linear-gradient( #54545455, #545454 );
     height: 100%;
     width: 100%;
     font-family:Arial, Helvetica, sans-serif;
-    background-color: #797979;
-    opacity: 1;
-    background-image:  repeating-radial-gradient( circle at 88% 6%, transparent 0, #000000 10px ), repeating-linear-gradient( #54545455, #545454 );
-
 }
 .container {
-    min-width: 320px;
-    background-color: rgba(0, 0, 0,0.7);
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    align-content: stretch;
-    width: 80%;
+    align-items: center;
+    min-width: 320px;
+    width: 90%;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
-    height: 100%;
-}
-.header,.main,.footer {
-    margin: 2px;
-    padding: 0;
-    background-color: transparent;
-}
-.header {
-    display: flex;
-    flex-flow: row wrap;
-    width: calc(100% - 6px);
-    justify-content: flex-end;
-    align-content: flex-end;
-}
-.main {
-    flex: 2;
 }
 
-.footer {
+.header,.main,.footer {
     display: flex;
-    height: min-content;
-    justify-content: center;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: stretch;
+    background-color: transparent;
+    margin: 1ch;
+    margin-top: 0.5ch;
+    margin-bottom: 0.5ch;
+    width: calc( 100% - 1ch);
+}
+
+.main {
+    flex: 2;
+    display: flex;
+    overflow: auto;
+    height: 100%;
+    background-color: salmon;
 }
 
 

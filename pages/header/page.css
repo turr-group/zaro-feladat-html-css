@@ -1,19 +1,18 @@
 .header-container {
-    position: relative;
     display: flex;
-    justify-content: flex-start;
-    align-content: flex-start;
-    align-items: flex-start;  /* y */
-    align-self: flex-start;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-end;  /* y */
+    align-self: flex-end;
     flex-flow: row wrap;
-    width: fit-content;
-    height: fit-content;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 60, 116,0.5);
+    padding: 2ch;
 }
-.navbar_menu {
+.menu {
     display: flex;
     flex-flow: row wrap;
-    border: 1px solid red;
     /* align-items: flex-end;
     align-content: flex-end;
     align-self: flex-end; */
@@ -22,10 +21,10 @@
     padding: 0;
 }
 
-.navbar_menu > li:hover {
+.menu > li:hover {
     animation-name: anim_trans_to_red;
     animation-duration: 1s;
-    background-color: rgba(255,0,0,1);
+    background-color: rgba(255,0,0,0.5);
     color: white;
     cursor: pointer;
     border-radius: 6px;
@@ -33,40 +32,40 @@
 
 @keyframes anim_trans_to_red {
     0%   {background-color: rgba(255,0,0,0);}
-    100% {background-color: rgba(255,0,0,1);}
+    50% {background-color: rgba(255,0,0,1);}
+    100%   {background-color: rgba(255,0,0,0);}
 }
 
-.navbar_menu_item, .navbar_menu_sub_item, .navbar_menu_button {
+.menu_item, .menu_sub_item, .menu_button {
+    display: inline-block;
     overflow-wrap: break-word;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     width: fit-content;
     height: min-content;
     margin-left: 1ch;
-    padding: 0.5ch;
-    /* font-size: calc(0.5rem + 2vw); */
-    /* transition-property: all;
-	transition-duration: .5s; */
-    /* transition: all 0.4s ease-in-out; */
+    padding: 0.7ch;
+    border-radius: 12px;
+    align-self: baseline;
+    transition: all 0.4s ease-in-out;
 }
 
-
-.navbar_menu_item {
-    display: inline-block;
+.menu_item {
     color: white;
     background-color: transparent;
 }
 
-.navbar_menu_sub_item {
+.menu_sub_item {
     margin-left: 0;
     margin-right: 0;
     display: none;
     color: white;
     width: 0px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 255, 0, 0.5);
+    opacity: 0%;
 }
 
-.navbar_menu_button {
-    display: inline-block;
+.menu_button {
+
     background-color: rgba(0, 255, 0, 0.2);
     color: white;
 }
@@ -75,7 +74,7 @@
 
 /* 
 @media only screen and (max-width: 940px) {
-    .navbar_menu > li {
+    .menu > li {
         font-size: calc(3ch/2);
         transition: ease all .5s;    
     }

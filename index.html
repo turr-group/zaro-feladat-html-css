@@ -14,9 +14,22 @@
 </head>
     <body>
         <div class="container">
-            <div class="header"><script>$(".header").load(`./pages/header/page.html`);</script></div>
-            <div class="main"><script>$(".main").load(`./pages/0/page.html`);</script></div>
-            <div class="footer"><script>$(".footer").load(`./pages/footer/page.html`);</script></div>
+                <div class="header">
+                    <script>
+                        $(".header").load(`./pages/header/page.html`);
+                        $.getScript(`./pages/header/scripts.js`);
+                    </script>
+                </div>
+                <div class="main">
+                        <script>
+                            $(".main").load(`./pages/0/page.html`);
+                        </script>
+                </div>
+            <div class="footer">
+                <script>
+                    $(".footer").load(`./pages/footer/page.html`);
+                </script>
+            </div>
         </div>
     </body>
 </html>
