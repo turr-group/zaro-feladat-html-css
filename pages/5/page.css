@@ -1,3 +1,11 @@
 .page5-container {
     font-size: 8ch;
 }
+.price-container
+{
+    display: inline-flex;
+}
+.price_slice
+{
+    border: 2px black solid;
+}
