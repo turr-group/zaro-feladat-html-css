@@ -27,7 +27,6 @@ html, body {
     align-content: space-between;
     align-items: stretch;
     background-color: rgb(104, 243, 236);
-    opacity: 0.5;
     transition: all 0.4s ease-in-out;
     width: calc( 100% - 1ch);
 }
