@@ -7,3 +7,7 @@ h3 {
 p {
     font-size: 1em;
 }
+body{
+    margin: auto;
+    padding: 20px;
+}
