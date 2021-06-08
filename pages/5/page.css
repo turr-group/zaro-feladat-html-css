@@ -2,7 +2,23 @@
 {
     display: inline-flex;
 }
-.price_slice
+.price-slice
 {
     border: 2px black solid;
+    margin-right:1rem ;
+}
+.price-slice-title
+{
+    background-color: red;
+    
+}    
+.sub-head
+{
+    background-color: rgba(0, 255, 255, 0.5);
+    width: auto;
+    padding: 1%;
+}
+.title
+{
+    font-variant: small-caps;
 }
