@@ -1,3 +1,22 @@
+/**************************************************************************
+    Légyszíves a html, body és egyéb default tag-okat ne írjatok át !
+ **************************************************************************
+    Erre van az index-html, de azt se írjátok át mert akkor az egész oldalt
+    átírjátok, ugyanez igaz az olyan tag-ekre mint body, h1 és a többi, ezeket 
+    ne írjátok át mert az egész oldal kinézetét/viselkedését árírjátok.
+    
+    Minden egyes tartalmi oldalon (leszámítva a headert és footert) a 
+    tartalom bele van rakva egy .page-container nevű div-be, ennek a div-nek
+    a beállításai találhatók ezen szöveg alatt .page-container néven.
+    Ez azt jelenti ha itt átírjátok a .page-container-t akkor az érvényes
+    lesz minden tartalmi oldalra, magának a tartalmaknak ezért van minden
+    mappában egy saját css fileja, page.css néven. Az ebben beállított dolgok
+    csak az adott oldalra vonatkoznak. Jelenleg üresek. Ha a tartalmi oldalakra
+    akartok további új osztályokat vagy id-ket amik mind az összes oldalra
+    vonatkoznak természetessn itt tudjátok megtenni, hasonlóan a .page-container-hez.
+*/
+
+
 .page-container {
     background-color: rgba(0, 129, 80, 0.39);
     color: white;
@@ -13,9 +32,5 @@ h3 {
 }
 p {
     font-size: 1em;
-}
-body{
-    margin: auto;
-    padding: 20px;
 }
 
