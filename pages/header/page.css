@@ -5,16 +5,16 @@
     align-items: flex-end;  /* y */
     align-self: flex-end;
     flex-flow: row wrap;
-    width: 100%;
+    width: calc(100% - 4ch - 0.6rem);
     height: 100%;
-    background-color: rgba(0, 60, 116,0.5);
     padding: 2ch;
     background: url(../../media/images/Surfer\ Girl\ Wallpaper\ \ \ ForWallpapercom.jpg) no-repeat;
     background-size: cover;
-    background-position: bottom left; 
-    border-bottom-right-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+    background-position: bottom right; 
+    background-color: rgba(91, 86, 83,0.5);
     border: 0.3rem rgba(0, 0, 0, 0.75) solid;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 .menu {
     display: inline-flex;
