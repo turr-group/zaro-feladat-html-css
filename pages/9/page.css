@@ -1,0 +1,10 @@
+.sub-head
+{
+    background-color: rgba(0, 255, 255, 0.5);
+    width: auto;
+    padding: 1%;
+}
+.title
+{
+    font-variant: small-caps;
+}

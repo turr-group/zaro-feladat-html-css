@@ -18,7 +18,6 @@
 
 
 .page-container {
-    background-color: rgba(0, 129, 80, 0.39);
     color: white;
     display: inline-block;
     padding: 1rem;
@@ -34,5 +33,10 @@ h3 {
 }
 p {
     font-size: 1em;
+    text-align: justify;
 }
-
+.page-list
+{
+    list-style:square;
+    line-height: 200%; 
+}
