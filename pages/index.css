@@ -1,5 +1,7 @@
 html, body {
     background-color: #797979;
+    background-size: cover;
+    background-position: bottom; 
     background-image:  repeating-radial-gradient( circle at 50% 100%, transparent 0, #000000 10px ), repeating-linear-gradient( #54545455, #545454 );
     height: 100%;
     width: 100%;
@@ -36,7 +38,7 @@ html, body {
 .main {
     flex: 0.6;
     height: 100%;
-    width: calc(100% - 4ch);
+    width: 100%;
     overflow: auto;
     margin-top: 0.5ch;
     margin-bottom: 0.5ch;
