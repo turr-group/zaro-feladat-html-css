@@ -36,7 +36,6 @@ html, body {
 .main {
     flex: 0.6;
     height: 100%;
-<<<<<<< HEAD
     margin-top: 0.5ch;
     margin-bottom: 0.5ch;
     margin-left: 4ch;
@@ -45,10 +44,6 @@ html, body {
     overflow: auto;
     scrollbar-width: auto;
     scrollbar-color: rgba(82, 93, 167, 0.5) transparent;
-=======
-    background-color: rgba(0, 129, 80, 0.39);
-    border: 0.3rem rgba(0, 0, 0, 0.75) solid;
->>>>>>> f9514061f0b86aad8c7caf3f02909f02c0269e76
 }
 
 ::-webkit-scrollbar {
