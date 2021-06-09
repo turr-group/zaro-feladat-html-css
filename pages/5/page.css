@@ -1,11 +1,15 @@
 .price-container
 {
-    display: inline-flex;
+    display:grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
 }
 .price-slice
 {
     border: 2px black solid;
-    margin-right:1rem ;
+    margin:0rem 0.5rem 0rem 0.5rem;
+    padding: 0% 2% 0% 2%;
+ 
 }
 .price-slice-title
 {
@@ -21,4 +25,20 @@
 .title
 {
     font-variant: small-caps;
+}
+@media screen and (max-width: 992px) 
+{
+    .price-container
+    {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+    }
+}
+@media screen and (max-width:665px)
+{
+    .price-container
+    {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
 }
